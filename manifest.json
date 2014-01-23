@@ -5,6 +5,7 @@
 	"permissions": [
 		"cookies",
 		"tabs",
+		"notifications",
 		"http://*.sears.com/",
 		"http://*.kmart.com/"
 	]
