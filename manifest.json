@@ -1,0 +1,11 @@
+{
+	"manifest_version": 1,
+	"name": "SHC Helper",
+	"version": "0.1",
+	"permissions": [
+		"cookies",
+		"tabs",
+		"http://*.sears.com/",
+		"http://*.kmart.com/"
+	]
+}
