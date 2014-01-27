@@ -27,5 +27,5 @@ shcLinkUpdate = {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
- 	
+ 	shcLinkUpdate.getJiraLinks();
 });
