@@ -7,13 +7,22 @@
 		"tabs",
 		"notifications",
 	],
+	"page_action": {
+		"default_icon": "shcHelperIcon.png"
+	},
 	"content_scripts": [
 		{
-			"matches": ["http://*.sears.com/*",
-						"http://*.kmart.com/*",
-						"*://jira.intra.sears.com/*"
+			"matches": [
+				"*://jira.intra.sears.com/*"
 			],
-			"js": ["shcHelper.js"]
+			"js": ["jiraHelper.js"]
+		},
+		{
+			"matches": [
+				"http://*.sears.com/*",
+				"http://*.kmart.com/*",
+			],
+			"js": ["snkHelper.js"]
 		}
 	]
 }
