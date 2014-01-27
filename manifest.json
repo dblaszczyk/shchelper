@@ -6,7 +6,14 @@
 		"cookies",
 		"tabs",
 		"notifications",
-		"http://*.sears.com/",
-		"http://*.kmart.com/"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://*.sears.com/*",
+						"http://*.kmart.com/*",
+						"*://jira.intra.sears.com/*"
+			],
+			"js": ["shcHelper.js"]
+		}
 	]
 }
