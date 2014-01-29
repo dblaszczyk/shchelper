@@ -1,20 +1,21 @@
-var urlRegex = /([\w]+\.){1}([\w]+\.?)+/,
-shcLinkUpdate = {
+var shcLinkUpdate = {
+	curAnchor: null,
 	getJiraLinks: function(){
 		var allAnchor = document.getElementsByTagName("a");
 
 		for (var x = 0; i < allAnchor.length; x++){
-			var curURL = urlRegex.exec(allAnchor[x].getAttribute("href"));
+			this.curAnchor = allAnchor[x];
+			this.curURL = this.curAnchor.hostname);
 
-			if(curURL==="www.sears.com"||curURL==="www.kmart.com"||curURL==="staging.ch4.intra.sears.com"||curURL==="http://staging.ch4.intra.kmart.com/"){
-				this.updateLink(allAnchor[x]);
+			if(this.curURL==="www.sears.com"||this.curURL==="www.kmart.com"||this.curURL==="staging.ch4.intra.sears.com"||this.curURL==="http://staging.ch4.intra.kmart.com/"){
+				this.updateLink();
 			}
 		}
 
 		console.log("SHC Helper Log: " + filtAnchor.length + " anchor tags updated!");
 	},
-	updateLink: function(upAnchor){
-		upAnchor.addEventListener("click",this.linkPopup,false);
+	updateLink: function(){
+		this.curAnchor.addEventListener("click",this.linkPopup,false);
 	},
 	linkPopup: function(evt){
 		evt.preventDefault();
@@ -27,17 +28,22 @@ shcLinkUpdate = {
 
 		popUp.setAttribute("class", "shcHelperPU").setAttribute("style", "left: " + xCoord + "px; top: " + yCoord +"px;" );
 
-		if(curURL==="www.sears.com"||curURL==="staging.ch4.intra.sears.com"){
-			
+		if(this.curURL==="www.sears.com"||this.curURL==="staging.ch4.intra.sears.com"){
+			liveLink.href("http://www.sears.com"+curAnchor.pathname+curAnchor.search);
+			stageLink.href("http://staging.ch4.intra.sears.com"+curAnchor.pathname+curAnchor.search);
 		}else{
-
+			liveLink.href("http://www.kmart.com"+curAnchor.pathname+curAnchor.search);
+			stageLink.href("http://staging.ch4.intra.kmart.com"+curAnchor.pathname+curAnchor.search);
 		}
 
-		liveLink.setAttribute("target", "_blank").setAttribute("href", "left: " + xCoord + "px; top: " + yCoord +"px;" );
+		liveLink.setAttribute("target", "_blank");
 
-		stageLink.setAttribute("target", "_blank").setAttribute("href", "left: " + xCoord + "px; top: " + yCoord +"px;" );
+		stageLink.setAttribute("target", "_blank");
 			
 		console.log("SHC Helper Log: xCoord = " + xCoord + " yCoord = " + yCoord);
+		console.log("SHC Helper Log: liveLink = " + liveLink + " stageLink = " + stageLink);
+
+		document.body.appendChild(popUp);
 	}
 }
 
