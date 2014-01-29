@@ -22,7 +22,7 @@ var shcLinkUpdate = {
 	linkPopup: function(evt){
 		evt.preventDefault();
 
-		if(document.getElementById("shcHelperPU").length>0){
+		if(document.getElementById("shcHelperPU")){
 			document.body.removeChild(document.getElementById("shcHelperPU"));
 		}
 		var xCoord = evt.pageX,
@@ -54,8 +54,8 @@ var shcLinkUpdate = {
 		pu = document.getElementById("shcHelperPU");
 		puLinks = pu.getElementsByTagName("a");
 
-		pu.addEventListener("mouseout", function(){document.body.removeChild(this)}, false);
-		puLinks.addEventListener("click", function(){document.body.removeChild(document.getElementsByClassName("shcHelperPU"))}, false);
+		pu.addEventListener("mouseleave", function(){document.body.removeChild(this)}, false);
+//		puLinks.addEventListener("click", function(){document.body.removeChild(document.getElementsByClassName("shcHelperPU"))}, false);
 
 		console.log("SHC Helper Log: xCoord = " + xCoord + " yCoord = " + yCoord);
 		console.log("SHC Helper Log: liveLink = " + liveLink + " stageLink = " + stageLink);

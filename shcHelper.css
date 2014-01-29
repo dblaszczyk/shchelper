@@ -1,4 +1,4 @@
-.shcHelperPU {
+#shcHelperPU {
 	position: absolute;
 	padding: 5px;
 	height: 75px;
@@ -8,6 +8,6 @@
 	border-radius: 5px;
 	box-shadow: 5px 5px 10px 0px #000;
 }
-.shcHelperPU>a {
+#shcHelperPU>a {
 	display: block;
 }
