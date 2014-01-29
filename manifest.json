@@ -5,7 +5,7 @@
 	"permissions": [
 		"cookies",
 		"tabs",
-		"notifications",
+		"notifications"
 	],
 	"page_action": {
 		"default_icon": "shcHelperIcon.png"
