@@ -5,7 +5,7 @@ var shcLinkUpdate = {
 
 		for (var x = 0; i < allAnchor.length; x++){
 			this.curAnchor = allAnchor[x];
-			this.curURL = this.curAnchor.hostname);
+			this.curURL = this.curAnchor.hostname;
 
 			if(this.curURL==="www.sears.com"||this.curURL==="www.kmart.com"||this.curURL==="staging.ch4.intra.sears.com"||this.curURL==="http://staging.ch4.intra.kmart.com/"){
 				this.updateLink();
@@ -47,6 +47,6 @@ var shcLinkUpdate = {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', function () {
- 	shcLinkUpdate.getJiraLinks();
-});
+console.log("SHC Helper Log: Jira");
+
+shcLinkUpdate.getJiraLinks();

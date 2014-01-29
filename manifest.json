@@ -1,5 +1,5 @@
 {
-	"manifest_version": 1,
+	"manifest_version": 2,
 	"name": "SHC Helper",
 	"version": "0.1",
 	"permissions": [
@@ -13,15 +13,17 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"*://jira.intra.sears.com/*"
+				"https://jira.intra.sears.com/*"
 			],
 			"css": ["shcHelper.css"],
 			"js": ["jiraHelper.js"]
 		},
 		{
 			"matches": [
-				"http://*.sears.com/*",
-				"http://*.kmart.com/*",
+				"http://www.sears.com/*",
+				"http://www.kmart.com/*",
+				"https://www.sears.com/*",
+				"https://www.kmart.com/*"
 			],
 			"css": ["shcHelper.css"],
 			"js": ["snkHelper.js"]
