@@ -3,7 +3,7 @@ var shcLinkUpdate = {
 	getJiraLinks: function(){
 		var allAnchor = document.getElementsByTagName("a");
 
-		for (var x = 0; i < allAnchor.length; x++){
+		for (var x = 0; x < allAnchor.length; x++){
 			this.curAnchor = allAnchor[x];
 			this.curURL = this.curAnchor.hostname;
 
@@ -12,7 +12,7 @@ var shcLinkUpdate = {
 			}
 		}
 
-		console.log("SHC Helper Log: " + filtAnchor.length + " anchor tags updated!");
+		console.log("SHC Helper Log: " + allAnchor.length + " anchor tags updated!");
 	},
 	updateLink: function(){
 		this.curAnchor.addEventListener("click",this.linkPopup,false);
