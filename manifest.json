@@ -20,13 +20,17 @@
 		},
 		{
 			"matches": [
-				"http://www.sears.com/*",
-				"http://www.kmart.com/*",
-				"https://www.sears.com/*",
-				"https://www.kmart.com/*"
+				"http://*.sears.com/*",
+				"http://*.kmart.com/*",
+				"https://*.sears.com/*",
+				"https://*.kmart.com/*"
 			],
 			"css": ["shcHelper.css"],
 			"js": ["snkHelper.js"]
 		}
-	]
+	],
+	"background": {
+    	"scripts": ["shcHelper.js"],
+    	"persistent": false
+  	}
 }
