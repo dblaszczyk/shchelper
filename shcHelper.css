@@ -1,4 +1,5 @@
-#shcHelperPU {
+/* Jira helper Tooltip */
+#jiraHelperTT {
 	position: absolute;
 	padding: 5px;
 	height: 45px;
@@ -8,8 +9,14 @@
 	border-radius: 5px;
 	box-shadow: 5px 5px 10px 0px #000;
 }
-#shcHelperPU>a {
+#jiraHelperTT>a {
 	display: block;
 	font-size: 16px;
 	font-weight: bold;
+}
+/* Sears and Kmart helper Tooltip */
+#shcHelperPU{
+	width: 200px;
+	height: 200px;
+	background: #000;
 }

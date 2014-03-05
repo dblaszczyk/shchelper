@@ -16,4 +16,7 @@ switch(curAnchor){
 		console.log("You're at Kmart Staging");
 		break;
 }
-console.log('SHCHelper Log: curAnchor = '+document.cookie);
+//console.log('SHCHelper Log: curAnchor = '+document.cookie);
+function getMenuWindow(){
+	document.body.appendChild('<div id="shcHelperPU"></div>');
+}

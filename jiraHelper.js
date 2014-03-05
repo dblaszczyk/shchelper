@@ -31,7 +31,7 @@ var shcLinkUpdate = {
 		liveLink = document.createElement("a"),
 		stageLink = document.createElement("a");
 
-		popUp.id = "shcHelperPU";
+		popUp.id = "jiraHelperTT";
 		popUp.style.left = xCoord+"px";
 		popUp.style.top = yCoord+"px";
 		liveLink.target = "_blank";
