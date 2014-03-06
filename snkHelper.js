@@ -17,6 +17,3 @@ switch(curAnchor){
 		break;
 }
 //console.log('SHCHelper Log: curAnchor = '+document.cookie);
-function getMenuWindow(){
-	document.body.appendChild('<div id="shcHelperPU"></div>');
-}

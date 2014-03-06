@@ -1,3 +1,8 @@
+chrome.runtime.onMessage.addListener(function (msg, sndr, sendRes){
+	console.log('shcHelper Log: '+msg.action);
+	sendRes({party: "success"});
+});
+
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 	var domain = tab.url.match(/^[\w-]+:\/*\[?([\w\.:-]+)\]?(?::\d+)?/)[1];
 	console.log('SHCHelper Log: shcHelper.js domain = '+domain);

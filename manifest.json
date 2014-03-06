@@ -9,7 +9,7 @@
 	],
 	"page_action": {
 		"default_icon": "shcHelperIcon.png",
-		"default_popup": "shcHelper.html"
+		"default_popup": "shcHelperPU.html"
 	},
 	"content_scripts": [
 		{
@@ -31,7 +31,6 @@
 		}
 	],
 	"background": {
-    	"scripts": ["shcHelper.js"],
-    	"persistent": false
+    	"scripts": ["shcHelper.js"]
   	}
 }
